@@ -29,9 +29,9 @@
       </div>
     </div>
     <div class="row mb-3">
-      <label for="engineers" class="col-sm-2 col-form-label">Engineers:</label>
+      <label for="developers" class="col-sm-2 col-form-label">Developers:</label>
       <div class="col-sm-2">
-        <input type="number" class="form-control" id="engineers" />
+        <input type="number" class="form-control" id="developers" />
       </div>
     </div>
     <div class="row mb-3">
@@ -86,21 +86,21 @@
       const urlParams = new URLSearchParams(window.location.search);
       return {
         fullCapacity: urlParams.get("full-capacity") || 0,
-        engineers: urlParams.get("engineers") || 0,
+        developers: urlParams.get("developers") || 0,
         daysOff: urlParams.get("days-off") || 0,
         sprintLength: urlParams.get("sprint-length") || 10,
       };
     }
     function calculate() {
       const fullCapacity = new Number(document.getElementById("full-capacity").value);
-      const engineers = new Number(document.getElementById("engineers").value);
+      const developers = new Number(document.getElementById("developers").value);
       const daysOff = new Number(document.getElementById("days-off").value);
       const sprintLength = new Number(document.getElementById("sprint-length").value);
 
       try {
         var totalComingSprintCapacity = calculateTotalCapacity(
           fullCapacity,
-          engineers,
+          developers,
           daysOff,
           sprintLength
         );
@@ -140,15 +140,15 @@
       }
     }
 
-    function calculateTotalCapacity(fullCapacity, engineersNumber, daysOff, sprintLength) {
-      var totalDays = engineersNumber * sprintLength;
+    function calculateTotalCapacity(fullCapacity, developersNumber, daysOff, sprintLength) {
+      var totalDays = developersNumber * sprintLength;
       return Math.floor(fullCapacity * ((totalDays - daysOff) / totalDays));
     }
 
     const presets = getPreset();
     document.getElementById("full-capacity").value = presets.fullCapacity;
     document.getElementById("days-off").value = presets.daysOff;
-    document.getElementById("engineers").value = presets.engineers;
+    document.getElementById("developers").value = presets.developers;
     document.getElementById("sprint-length").value = presets.sprintLength;
   </script>
 </body>
