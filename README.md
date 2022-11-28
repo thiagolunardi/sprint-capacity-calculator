@@ -73,7 +73,8 @@ Arguments
 - `developers`: number of developers in the Team
 - `full-capacity`: team full capacity in story points
 - `days-off`: number of developer days off for the sprint
+- `sprint-length`: sprint length size in days. Default: 10
 
 ### Example:
 
-- https://nice-hill-072d06b03.1.azurestaticapps.net/?developers=6&full-capacity=40&days-off=0
+- https://nice-hill-072d06b03.1.azurestaticapps.net/?developers=6&full-capacity=40&days-off=0&sprint-length=8
