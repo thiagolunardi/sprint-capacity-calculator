@@ -67,7 +67,7 @@ Distributing:
 
 # Live test
 
-https://nice-hill-072d06b03.1.azurestaticapps.net/
+https://ashy-river-061221003.3.azurestaticapps.net/
 
 Arguments
 - `developers`: number of developers in the Team
@@ -77,4 +77,4 @@ Arguments
 
 ### Example:
 
-- https://nice-hill-072d06b03.1.azurestaticapps.net/?developers=6&full-capacity=40&days-off=0&sprint-length=8
+- https://ashy-river-061221003.3.azurestaticapps.net/?developers=6&full-capacity=40&days-off=0&sprint-length=8
